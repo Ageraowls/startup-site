@@ -1,3 +1,128 @@
+/* variables */
+
+$main-font-size: 1rem;
+$wrapper-padding: 2rem;
+$main-color: #ffffff;
+
+/* main-style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span {
+  display: block;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: $main-font-size;
+  color: $main-color;
+  background-color: rgba(40, 44, 53, 1);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: $wrapper-padding;
+
+  .title-information {
+    display: flex;
+    align-items: center;
+    color: $main-color;
+    gap: 2rem;
+    justify-content: center;
+    text-shadow: 0.05rem 0.05rem 0.05rem #000;
+
+    .dash {
+      font-size: 3rem;
+    }
+
+    .des-title {
+      font-size: 2rem;
+    }
+  }
+}
+
+.main-information {
+  width: 70.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.content-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .content-item {
+    width: 30rem;
+  }
+}
+
+svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.list {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.plan {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .plan-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 16rem;
+
+    .card-title {
+      text-align: center;
+    }
+  }
+}
+
+.card-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgba(245, 245, 245, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* fonts */
 
 @font-face {

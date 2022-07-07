@@ -1,15 +1,129 @@
+/* variables */
+/* main-style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span {
+  display: block;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #282c35;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+}
+.wrapper .title-information {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  gap: 2rem;
+  justify-content: center;
+  text-shadow: 0.05rem 0.05rem 0.05rem #000;
+}
+.wrapper .title-information .dash {
+  font-size: 3rem;
+}
+.wrapper .title-information .des-title {
+  font-size: 2rem;
+}
+
+.main-information {
+  width: 70.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.content-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.content-list .content-item {
+  width: 30rem;
+}
+
+svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.list {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.plan {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.plan .plan-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 16rem;
+}
+.plan .plan-card .card-title {
+  text-align: center;
+}
+
+.card-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* fonts */
 @font-face {
-  font-family: 'Nanum Gothic';
+  font-family: "Nanum Gothic";
   font-style: normal;
   font-weight: 400;
-  src: url('../../assets/fonts/NanumGothic-Regular.ttf') format('ttf');
+  src: url("../../assets/fonts/NanumGothic-Regular.ttf") format("ttf");
 }
 @font-face {
-  font-family: 'Nanum Gothic';
+  font-family: "Nanum Gothic";
   font-style: bold;
   font-weight: 700;
-  src: url('../../assets/fonts/NanumGothic-Bold.ttf') format('ttf');
+  src: url("../../assets/fonts/NanumGothic-Bold.ttf") format("ttf");
 }
 
 /*# sourceMappingURL=style.css.map */
