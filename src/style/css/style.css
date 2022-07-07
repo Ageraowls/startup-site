@@ -33,6 +33,7 @@ body {
   background-color: #282c35;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -89,7 +90,7 @@ svg {
 .plan {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 .plan .plan-card {
   display: flex;
@@ -97,9 +98,14 @@ svg {
   align-items: center;
   gap: 1rem;
   width: 16rem;
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
 }
 .plan .plan-card .card-title {
   text-align: center;
+}
+.plan .opacity {
+  opacity: 1;
 }
 
 .card-icon {
@@ -110,6 +116,27 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.new-title {
+  padding-bottom: 1.4rem;
+}
+
+.card-description {
+  color: #000;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  text-align: inherit;
+  font-weight: 600;
+}
+.card-description span {
+  display: inline;
+}
+
+.underline-word {
+  text-decoration: underline;
 }
 
 /* fonts */
