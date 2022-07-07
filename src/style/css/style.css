@@ -27,7 +27,7 @@ h6 {
 }
 
 body {
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 1rem;
   color: #ffffff;
   background-color: #282c35;
@@ -38,7 +38,7 @@ body {
 }
 
 .wrapper {
-  width: 75rem;
+  max-width: 75rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -60,7 +60,7 @@ body {
 }
 
 .main-information {
-  width: 70.5rem;
+  max-width: 70.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -139,18 +139,75 @@ svg {
   text-decoration: underline;
 }
 
+@media (max-width: 1159px) {
+  .wrapper {
+    width: 65rem;
+  }
+
+  .content-list .content-item {
+    width: 46rem;
+  }
+
+  .plan {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1011px) {
+  .wrapper .title-information .des-title {
+    font-size: 1.5rem;
+  }
+  .wrapper .title-information .title {
+    font-size: 1.5rem;
+  }
+
+  .content-list .content-item {
+    width: 46rem;
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 1rem;
+  }
+  .wrapper .title-information {
+    flex-direction: column;
+  }
+  .wrapper .title-information .dash {
+    display: none;
+  }
+  .wrapper .title-information .title {
+    text-align: center;
+  }
+}
+@media (max-width: 772px) {
+  .content-list .content-item {
+    width: 25rem;
+  }
+}
+@media (max-width: 409px) {
+  .wrapper {
+    padding: 2rem 0;
+  }
+
+  .content-list {
+    padding: 0;
+  }
+  .content-list .content-item {
+    width: 20rem;
+    text-align: center;
+  }
+}
 /* fonts */
 @font-face {
-  font-family: "Nanum Gothic";
+  font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
-  src: url("../../assets/fonts/NanumGothic-Regular.ttf") format("ttf");
+  src: url("../../assets/fonts/Barlow-Regular.woff") format("woff"), url("../../assets/fonts/Barlow-Regular.ttf") format("ttf");
 }
 @font-face {
-  font-family: "Nanum Gothic";
+  font-family: "Barlow";
   font-style: bold;
   font-weight: 700;
-  src: url("../../assets/fonts/NanumGothic-Bold.ttf") format("ttf");
+  src: url("../../assets/fonts/Barlow-SemiBold.woff") format("woff"), url("../../assets/fonts/Barlow-SemiBold.ttf") format("ttf");
 }
 
 /*# sourceMappingURL=style.css.map */
