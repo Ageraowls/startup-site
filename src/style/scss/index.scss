@@ -185,6 +185,14 @@ svg {
   }
 }
 
+@media (max-width: 912px) {
+  .plan {
+    .plan-card {
+      opacity: 1;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .wrapper {
     padding: 1rem;
