@@ -29,8 +29,8 @@ h6 {
 body {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
-  color: #ffffff;
-  background-color: #282c35;
+  color: #000;
+  background-color: #efdecd;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,16 +47,10 @@ body {
 .wrapper .title-information {
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: #000;
   gap: 2rem;
   justify-content: center;
   text-shadow: 0.05rem 0.05rem 0.05rem #000;
-}
-.wrapper .title-information .dash {
-  font-size: 3rem;
-}
-.wrapper .title-information .des-title {
-  font-size: 2rem;
 }
 
 .main-information {
@@ -67,11 +61,21 @@ body {
   justify-content: center;
 }
 
-.content-list {
+.content {
   display: flex;
   gap: 1.5rem;
-  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.content-list {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.content-list .content-title {
+  font-size: 2rem;
+  text-align: center;
 }
 .content-list .content-item {
   width: 30rem;
@@ -82,15 +86,28 @@ svg {
   height: 4rem;
 }
 
+.content-company {
+  gap: 1.1rem;
+}
+
 .list {
   width: 3.5rem;
   height: 3.5rem;
 }
 
+h1 {
+  margin: 0 auto;
+  letter-spacing: 0.2rem;
+}
+
 .plan {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  flex-flow: column;
+  gap: 1.2rem;
+  padding: 1rem;
+  background: rgba(111, 78, 55, 0.05);
+  border-radius: 5px;
+  box-shadow: 0 0 2px;
 }
 .plan .plan-card {
   display: flex;
@@ -98,7 +115,9 @@ svg {
   align-items: center;
   gap: 1rem;
   width: 16rem;
-  opacity: 0.6;
+  opacity: 1;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   transition: opacity 0.5s ease;
 }
 .plan .plan-card .card-title {
@@ -112,31 +131,94 @@ svg {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background-color: rgba(100, 84, 82, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-}
-
-.new-title {
-  padding-bottom: 1.4rem;
+  box-shadow: 1.8px 1.8px 6px black;
 }
 
 .card-description {
   color: #000;
   padding: 1rem;
-  background-color: whitesmoke;
+  background-color: rgba(100, 84, 82, 0.3);
   border-radius: 1rem;
   text-align: inherit;
   font-weight: 600;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
 }
 .card-description span {
   display: inline;
 }
 
+.about-company,
+.ideology-company {
+  width: 500px;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.card-about {
+  text-align: center;
+  box-shadow: 1.3px 1.3px 4px;
+}
+
+.content {
+  border-radius: 5px;
+  background: rgba(111, 78, 55, 0.05);
+  box-shadow: 0 0 2px;
+  padding: 1rem;
+}
+
+.wrapper {
+  background: rgba(111, 78, 55, 0.05);
+  box-shadow: 0 0 2px;
+}
+
+.card-title {
+  margin: 0 auto;
+}
+
+.plan-cards {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(111, 78, 55, 0.05);
+  box-shadow: 0 0 2px;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
 .underline-word {
   text-decoration: underline;
+}
+
+.desc {
+  width: 400px;
+  text-align: center;
+  box-shadow: 1.3px 1.3px 4px;
+}
+
+.phone-number {
+  text-decoration: none;
+  color: black;
+  background: rgba(111, 78, 55, 0.1);
+  padding: 0.4rem;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column;
+  gap: 0.4rem;
+  text-align: center;
+  margin: 0 auto;
 }
 
 @media (max-width: 1159px) {
