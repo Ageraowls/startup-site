@@ -114,7 +114,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 16rem;
   opacity: 1;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -122,9 +121,6 @@ h1 {
 }
 .plan .plan-card .card-title {
   text-align: center;
-}
-.plan .opacity {
-  opacity: 1;
 }
 
 .card-icon {
@@ -183,6 +179,7 @@ h1 {
 .plan-cards {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   background: rgba(111, 78, 55, 0.05);
   box-shadow: 0 0 2px;
   border-radius: 5px;
@@ -226,11 +223,11 @@ h2 {
     width: 65rem;
   }
 
-  .content-list .content-item {
-    width: 46rem;
+  .content {
+    flex-wrap: wrap;
   }
 
-  .plan {
+  .plan-cards {
     flex-wrap: wrap;
   }
 }
@@ -246,23 +243,9 @@ h2 {
     width: 46rem;
   }
 }
-@media (max-width: 912px) {
-  .plan .plan-card {
-    opacity: 1;
-  }
-}
 @media (max-width: 800px) {
   .wrapper {
     padding: 1rem;
-  }
-  .wrapper .title-information {
-    flex-direction: column;
-  }
-  .wrapper .title-information .dash {
-    display: none;
-  }
-  .wrapper .title-information .title {
-    text-align: center;
   }
 }
 @media (max-width: 772px) {
@@ -270,9 +253,49 @@ h2 {
     width: 25rem;
   }
 }
+@media (max-width: 580px) {
+  .wrapper {
+    padding: 1rem;
+  }
+
+  .about-company {
+    width: 350px;
+  }
+
+  .ideology-company {
+    width: 350px;
+  }
+
+  .card-description {
+    width: 350px;
+  }
+}
+@media (max-width: 495px) {
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+@media (max-width: 456px) {
+  .about-company {
+    width: 250px;
+  }
+
+  .ideology-company {
+    width: 250px;
+  }
+
+  .card-description {
+    width: 250px;
+  }
+
+  .plan-card {
+    padding: 1rem;
+  }
+}
 @media (max-width: 409px) {
   .wrapper {
-    padding: 2rem 0;
+    padding: 1rem;
   }
 
   .content-list {
@@ -281,6 +304,19 @@ h2 {
   .content-list .content-item {
     width: 20rem;
     text-align: center;
+  }
+}
+@media (max-width: 345px) {
+  .title {
+    padding-top: 1rem;
+  }
+
+  .contact {
+    padding-bottom: 1rem;
+  }
+
+  .wrapper {
+    padding: 0.1rem;
   }
 }
 /* fonts */
