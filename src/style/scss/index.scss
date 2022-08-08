@@ -228,6 +228,30 @@ h2 {
   margin: 0 auto;
 }
 
+.switcher {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: right;
+}
+
+.lang-item {
+  width: 50px;
+  border: none;
+  border-radius: 7px;
+  background: rgba(111, 78, 55, 0.1);
+  box-shadow: 0 0 2px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.lang-item:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}
+
 @media (max-width: 1159px) {
   .wrapper {
     width: 65rem;

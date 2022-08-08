@@ -1,51 +1,43 @@
+import { setLocalStorage, checkLocalStorage } from './src/helpers/localStorageService.js';
+
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.plan-card');
-  const opacityCard = document.querySelector('.opacity');
-  const getOpacity = () => {
-    cards.forEach((card) => {
-      card.addEventListener('mouseenter', () => {
-        if (card.classList.contains('opacity')) {
-          card.classList.remove('opacity');
-          opacityCard.classList.add('opacity');
-        } else {
-          opacityCard.classList.remove('opacity');
-          card.classList.add('opacity');
-        }
+  const ruBtn = document.querySelector('.ru');
+  const enBtn = document.querySelector('.en');
+  const translateArr = [...document.querySelectorAll('[data-i18]')];
+  const langBtns = document.querySelectorAll('.lang-item');
+  const switcher = document.querySelector('.switcher');
+
+  checkLocalStorage(ruBtn, enBtn);
+
+  // switch language
+  async function getData() {
+    const res = await fetch('./src/helpers/translate.json');
+    const data = await res.json();
+
+    function changeLanguage(e) {
+      const lang = e.target.textContent.toLowerCase();
+      translateArr.forEach((item) => {
+        const translate = item.dataset.i18;
+        item.textContent = data[lang][translate];
+        localStorage.lang = lang;
       });
-    });
-  };
+    }
+    setLocalStorage(translateArr, data);
 
-  const closeOpacity = () => {
-    cards.forEach((card) => {
-      card.addEventListener('mouseleave', () => {
-        if (card.classList.contains('opacity')) {
-          card.classList.remove('opacity');
-        }
-      });
-    });
-  };
+    ruBtn.addEventListener('click', changeLanguage);
+    enBtn.addEventListener('click', changeLanguage);
+  }
 
-  getOpacity();
-  closeOpacity();
+  getData();
+
+  // active btn
+  function activeBtnLang(e) {
+    langBtns.forEach((item) => {
+      item.classList.remove('active');
+    });
+
+    e.target.classList.add('active');
+  }
+
+  switcher.addEventListener('click', activeBtnLang);
 });
-
-/* click 1 */
-
-/* let activeCard = cards[0];
-  cards.forEach((card) => {
-    card.addEventListener('click', () => {
-      activeCard.classList.remove('opacity');
-      activeCard = card;
-      activeCard.classList.add('opacity');
-    });
-  }); */
-
-/* click 2 */
-
-/* cards.forEach((card) => {
-  card.addEventListener('click', function () {
-    cards.forEach((item) => item.classList.remove('opacity'));
-    this.classList.add('opacity');
-  });
-});
- */
