@@ -11,7 +11,8 @@ $main-color: #000;
   box-sizing: border-box;
 }
 
-span {
+span,
+svg {
   display: block;
 }
 
@@ -40,6 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  transition: all 0.3s linear;
 }
 
 .wrapper {
@@ -63,7 +65,7 @@ body {
   max-width: 70.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -87,11 +89,6 @@ body {
   .content-item {
     width: 30rem;
   }
-}
-
-svg {
-  width: 4rem;
-  height: 4rem;
 }
 
 .content-company {
@@ -250,6 +247,47 @@ h2 {
 
 .active {
   opacity: 1;
+}
+
+.theme {
+  text-align: right;
+}
+
+.theme-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: fill ease 0.3s;
+}
+
+.theme-icon {
+  width: 30px;
+  height: 30px;
+  transition: fill ease 1s;
+}
+
+.theme-icon:hover {
+  fill: #fff;
+  transition: fill ease 0.3s;
+}
+
+.main-theme {
+  background-color: #111111;
+}
+
+.light {
+  color: #fff;
+}
+
+.card-icon.light {
+  background: #fff;
+}
+.phone-number.light,
+.plan.light,
+.wrapper.light,
+.content.light,
+.plan-cards.light {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 1159px) {

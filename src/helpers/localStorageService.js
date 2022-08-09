@@ -26,3 +26,40 @@ export function checkLocalStorage(ruBtn, enBtn) {
     enBtn.classList.add('active');
   }
 }
+
+/* export function checkTheme(elem, Allarr, icon, moon, sun) {
+  let userTheme = localStorage.getItem('theme');
+  if (userTheme == undefined) {
+    localStorage.setItem('theme', 'light');
+    userTheme = 'light';
+  }
+
+  if (document.body.classList.contains('main-theme')) {
+    document.body.classList.remove('main-theme');
+    elem.forEach((item) => {
+      Allarr.forEach((el) => {
+        if (el.classList.contains(item)) {
+          el.classList.remove('light');
+        }
+      });
+    });
+    icon.innerHTML = sun;
+  }
+  if (userTheme === 'dark') {
+    localStorage.setItem('theme', 'dark');
+    userTheme = 'dark';
+  }
+  if (!document.body.classList.contains('main-theme')) {
+    document.body.classList.add('main-theme');
+    elem.forEach((item) => {
+      Allarr.forEach((el) => {
+        if (el.classList.contains(item)) {
+          el.classList.add('light');
+        }
+      });
+    });
+    document.body.classList.add('main-theme');
+    icon.innerHTML = moon;
+  }
+}
+ */
